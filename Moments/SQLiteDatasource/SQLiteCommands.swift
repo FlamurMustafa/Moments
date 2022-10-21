@@ -59,6 +59,34 @@ class SQLiteCommands{
         return true
     }
     
+    //update row
+    static func updateRow(_ momentValues: Moment) -> Bool?{
+        guard let database = SQLiteDatabase.sharedInstance.database else {
+                   print("Datastore connection error")
+                   return nil
+               }
+               
+               // Extracts the appropriate contact from the table according to the id
+               let moment = table.filter(id == momentValues.id).limit(1)
+               
+               do {
+                   // Update the contact's values
+                   if try database.run(moment.update(name <- momentValues.name, description <- momentValues.description, date <- momentValues.date, photo <- momentValues.photo)) > 0 {
+                       print("Updated contact")
+                       return true
+                   } else {
+                       print("Could not update contact: contact not found")
+                       return false
+                   }
+               } catch let Result.error(message, code, statement) where code == SQLITE_CONSTRAINT {
+                   print("Update row faild: \(message), in \(String(describing: statement))")
+                   return false
+               } catch let error {
+                   print("Updation failed: \(error)")
+                   return false
+               }
+    }
+    
     static func presentRows() -> [Moment]? {
             guard let database = SQLiteDatabase.sharedInstance.database else {
                 print("Datastore connection error")

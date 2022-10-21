@@ -20,6 +20,7 @@ class NewMomentViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         createTable()
+        setUpViews()
         photoImageView.makeRound()
         nameTextField.becomeFirstResponder()
     }
@@ -28,8 +29,17 @@ class NewMomentViewController: UIViewController {
         let database = SQLiteDatabase.sharedInstance.createTable()
     }
 
+    private func setUpViews(){
+        if let viewModel = viewModel{
+            nameTextField.text = viewModel.name
+            descriptionTextField.text = viewModel.description
+            dateTextField.text = viewModel.date
+            photoImageView.image = viewModel.photo
+        }
+    }
+    
     @IBAction func saveButtonClicked(_ sender: Any) {
-        let id: Int = 0
+        let id: Int = viewModel == nil ? 0: viewModel.id!
         let name = nameTextField.text ?? ""
         let description = descriptionTextField.text ?? ""
         let date = dateTextField.text ?? ""
@@ -37,8 +47,13 @@ class NewMomentViewController: UIViewController {
         guard let photo = uiImage.pngData() else {return}
         
         let momentValues = Moment(id: id, name: name, description: description, date: date, photo: photo)
-        createNewModel(momentValues)
-        SQLiteCommands.presentRows()
+        
+        if viewModel == nil {
+            createNewModel(momentValues)
+        } else{
+            updateMoment(momentValues)
+        }
+            
     }
     
     private func createNewModel(_ momentValues:  Moment){
@@ -51,7 +66,30 @@ class NewMomentViewController: UIViewController {
             }
     }
     
+    private func updateMoment(_ momentValues: Moment){
+        let momentUpdatedInTable = SQLiteCommands.updateRow(momentValues)
+        
+        if momentUpdatedInTable == true{
+            if let cellClicked = navigationController{
+                cellClicked.popViewController(animated: true)
+            }
+        }else{
+            
+        }
+    }
+    
     @IBAction func cancelButtonClicked(_ sender: Any) {
+        let addButtonClicked = presentingViewController is UINavigationController
+        
+        if addButtonClicked{
+            dismiss(animated: true, completion: nil)
+        }
+        
+        else if let cellClicked = navigationController{
+            cellClicked.popViewController(animated: true)
+        } else{
+            print("The MomentScreenTableViewController is not inside a nav controller")
+        }
         dismiss(animated: true, completion: nil)
     }
     
