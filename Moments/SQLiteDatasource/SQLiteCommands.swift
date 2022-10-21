@@ -93,7 +93,7 @@ class SQLiteCommands{
                 return nil
             }
             
-            // Contact Array
+            // Moment Array
             var momentArray = [Moment]()
             
             // Sorting data in descending order by ID
@@ -121,4 +121,17 @@ class SQLiteCommands{
             }
             return momentArray
         }
+    
+    static func deleteRow(momentId: Int){
+        guard let database = SQLiteDatabase.sharedInstance.database else{
+            print("Datastore connection error")
+            return
+        }
+        do{
+            let moment = table.filter(id==momentId).limit(1)
+            try database.run(moment.delete())
+        } catch{
+            print("delete row error")
+        }
+    }
 }

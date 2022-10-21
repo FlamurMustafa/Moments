@@ -50,7 +50,20 @@ class MomentScreenTableViewController: UITableViewController {
 
         return cell
     }
-    
+    //delete cell from table
+    	
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if editingStyle == .delete {
+                let moment = viewModel.cellForRowAt(indexPath: indexPath)
+                
+                // Delete contact from database table
+                SQLiteCommands.deleteRow(momentId: moment.id)
+                
+                // Updates the UI after delete changes
+                self.loadData()
+                self.tableView.reloadData()
+            }
+        }
     //passes selected contact from table cell to edit NewMomenViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "editContact"{

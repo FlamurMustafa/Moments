@@ -74,6 +74,7 @@ class NewMomentViewController: UIViewController {
                 cellClicked.popViewController(animated: true)
             }
         }else{
+            showErro("Can not update", message: "This moment exists")
             
         }
     }
