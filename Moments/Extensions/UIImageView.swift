@@ -9,7 +9,7 @@ import UIKit
 	
 extension UIImageView{
     //Make the image round
-    func round(){
+    func makeRound(){
         self.layer.masksToBounds = false
         self.layer.cornerRadius = self.frame.height/2
         self.clipsToBounds = true

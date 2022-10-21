@@ -23,6 +23,9 @@
 		4E1B01382902418800A6364E /* SQLiteDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B01372902418800A6364E /* SQLiteDatabase.swift */; };
 		4E1B013A290242DC00A6364E /* SQLiteCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B0139290242DC00A6364E /* SQLiteCommands.swift */; };
 		4E1B013D2902483E00A6364E /* NewMomentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B013C2902483E00A6364E /* NewMomentView.swift */; };
+		4E54CE4629025C7600A55BC0 /* MomentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E54CE4529025C7600A55BC0 /* MomentTableViewCell.swift */; };
+		4E54CE4829025EBB00A55BC0 /* MomentScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E54CE4729025EBB00A55BC0 /* MomentScreenViewModel.swift */; };
+		4E54CE4A29025FD600A55BC0 /* MomentScreenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E54CE4929025FD600A55BC0 /* MomentScreenTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		4E1B01372902418800A6364E /* SQLiteDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDatabase.swift; sourceTree = "<group>"; };
 		4E1B0139290242DC00A6364E /* SQLiteCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteCommands.swift; sourceTree = "<group>"; };
 		4E1B013C2902483E00A6364E /* NewMomentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMomentView.swift; sourceTree = "<group>"; };
+		4E54CE4529025C7600A55BC0 /* MomentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentTableViewCell.swift; sourceTree = "<group>"; };
+		4E54CE4729025EBB00A55BC0 /* MomentScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentScreenViewModel.swift; sourceTree = "<group>"; };
+		4E54CE4929025FD600A55BC0 /* MomentScreenTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentScreenTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,14 +119,14 @@
 		4E1B00F829023BA800A6364E /* Moments */ = {
 			isa = PBXGroup;
 			children = (
+				4E54CE4429025C1E00A55BC0 /* Controller */,
+				4E54CE4329025C0B00A55BC0 /* View */,
 				4E1B013B2902482500A6364E /* ViewModel */,
 				4E1B01362902416B00A6364E /* SQLiteDatasource */,
 				4E1B01332902410100A6364E /* Model */,
 				4E1B012C29023EF200A6364E /* Extensions */,
 				4E1B00F929023BA800A6364E /* AppDelegate.swift */,
 				4E1B00FB29023BA800A6364E /* SceneDelegate.swift */,
-				4E1B00FD29023BA800A6364E /* NewMomentViewController.swift */,
-				4E1B00FF29023BA800A6364E /* Main.storyboard */,
 				4E1B010229023BA900A6364E /* Assets.xcassets */,
 				4E1B010429023BA900A6364E /* LaunchScreen.storyboard */,
 				4E1B010729023BA900A6364E /* Info.plist */,
@@ -175,8 +181,27 @@
 			isa = PBXGroup;
 			children = (
 				4E1B013C2902483E00A6364E /* NewMomentView.swift */,
+				4E54CE4729025EBB00A55BC0 /* MomentScreenViewModel.swift */,
 			);
 			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		4E54CE4329025C0B00A55BC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E1B00FF29023BA800A6364E /* Main.storyboard */,
+				4E54CE4529025C7600A55BC0 /* MomentTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4E54CE4429025C1E00A55BC0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E1B00FD29023BA800A6364E /* NewMomentViewController.swift */,
+				4E54CE4929025FD600A55BC0 /* MomentScreenTableViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,11 +341,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E54CE4829025EBB00A55BC0 /* MomentScreenViewModel.swift in Sources */,
 				4E1B00FE29023BA800A6364E /* NewMomentViewController.swift in Sources */,
 				4E1B012E29023F2200A6364E /* UIImageView.swift in Sources */,
+				4E54CE4A29025FD600A55BC0 /* MomentScreenTableViewController.swift in Sources */,
 				4E1B00FA29023BA800A6364E /* AppDelegate.swift in Sources */,
 				4E1B013A290242DC00A6364E /* SQLiteCommands.swift in Sources */,
 				4E1B00FC29023BA800A6364E /* SceneDelegate.swift in Sources */,
+				4E54CE4629025C7600A55BC0 /* MomentTableViewCell.swift in Sources */,
 				4E1B013029023FE200A6364E /* UIViewController.swift in Sources */,
 				4E1B013D2902483E00A6364E /* NewMomentView.swift in Sources */,
 				4E1B01352902410F00A6364E /* Moment.swift in Sources */,
