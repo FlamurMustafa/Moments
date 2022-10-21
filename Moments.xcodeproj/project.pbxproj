@@ -16,6 +16,7 @@
 		4E1B011129023BA900A6364E /* MomentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B011029023BA900A6364E /* MomentsTests.swift */; };
 		4E1B011B29023BA900A6364E /* MomentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B011A29023BA900A6364E /* MomentsUITests.swift */; };
 		4E1B011D29023BA900A6364E /* MomentsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B011C29023BA900A6364E /* MomentsUITestsLaunchTests.swift */; };
+		4E1B012B29023C0000A6364E /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 4E1B012A29023C0000A6364E /* SQLite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E1B012B29023C0000A6364E /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = Moments;
+			packageProductDependencies = (
+				4E1B012A29023C0000A6364E /* SQLite */,
+			);
 			productName = Moments;
 			productReference = 4E1B00F629023BA800A6364E /* Moments.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 4E1B00ED29023BA800A6364E;
+			packageReferences = (
+				4E1B012929023C0000A6364E /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = 4E1B00F729023BA800A6364E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -596,6 +604,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4E1B012929023C0000A6364E /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4E1B012A29023C0000A6364E /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E1B012929023C0000A6364E /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4E1B00EE29023BA800A6364E /* Project object */;
 }
