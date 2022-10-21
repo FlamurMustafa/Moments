@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E1B00FA29023BA800A6364E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B00F929023BA800A6364E /* AppDelegate.swift */; };
 		4E1B00FC29023BA800A6364E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B00FB29023BA800A6364E /* SceneDelegate.swift */; };
-		4E1B00FE29023BA800A6364E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B00FD29023BA800A6364E /* ViewController.swift */; };
+		4E1B00FE29023BA800A6364E /* NewMomentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B00FD29023BA800A6364E /* NewMomentViewController.swift */; };
 		4E1B010129023BA800A6364E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1B00FF29023BA800A6364E /* Main.storyboard */; };
 		4E1B010329023BA900A6364E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E1B010229023BA900A6364E /* Assets.xcassets */; };
 		4E1B010629023BA900A6364E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E1B010429023BA900A6364E /* LaunchScreen.storyboard */; };
@@ -17,6 +17,12 @@
 		4E1B011B29023BA900A6364E /* MomentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B011A29023BA900A6364E /* MomentsUITests.swift */; };
 		4E1B011D29023BA900A6364E /* MomentsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B011C29023BA900A6364E /* MomentsUITestsLaunchTests.swift */; };
 		4E1B012B29023C0000A6364E /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 4E1B012A29023C0000A6364E /* SQLite */; };
+		4E1B012E29023F2200A6364E /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B012D29023F2200A6364E /* UIImageView.swift */; };
+		4E1B013029023FE200A6364E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B012F29023FE200A6364E /* UIViewController.swift */; };
+		4E1B01352902410F00A6364E /* Moment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B01342902410F00A6364E /* Moment.swift */; };
+		4E1B01382902418800A6364E /* SQLiteDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B01372902418800A6364E /* SQLiteDatabase.swift */; };
+		4E1B013A290242DC00A6364E /* SQLiteCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B0139290242DC00A6364E /* SQLiteCommands.swift */; };
+		4E1B013D2902483E00A6364E /* NewMomentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B013C2902483E00A6364E /* NewMomentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +46,7 @@
 		4E1B00F629023BA800A6364E /* Moments.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moments.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E1B00F929023BA800A6364E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E1B00FB29023BA800A6364E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4E1B00FD29023BA800A6364E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4E1B00FD29023BA800A6364E /* NewMomentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMomentViewController.swift; sourceTree = "<group>"; };
 		4E1B010029023BA800A6364E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E1B010229023BA900A6364E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E1B010529023BA900A6364E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +56,12 @@
 		4E1B011629023BA900A6364E /* MomentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MomentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E1B011A29023BA900A6364E /* MomentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsUITests.swift; sourceTree = "<group>"; };
 		4E1B011C29023BA900A6364E /* MomentsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4E1B012D29023F2200A6364E /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UII\bmageView.swift"; sourceTree = "<group>"; };
+		4E1B012F29023FE200A6364E /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		4E1B01342902410F00A6364E /* Moment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moment.swift; sourceTree = "<group>"; };
+		4E1B01372902418800A6364E /* SQLiteDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDatabase.swift; sourceTree = "<group>"; };
+		4E1B0139290242DC00A6364E /* SQLiteCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteCommands.swift; sourceTree = "<group>"; };
+		4E1B013C2902483E00A6364E /* NewMomentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMomentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +113,13 @@
 		4E1B00F829023BA800A6364E /* Moments */ = {
 			isa = PBXGroup;
 			children = (
+				4E1B013B2902482500A6364E /* ViewModel */,
+				4E1B01362902416B00A6364E /* SQLiteDatasource */,
+				4E1B01332902410100A6364E /* Model */,
+				4E1B012C29023EF200A6364E /* Extensions */,
 				4E1B00F929023BA800A6364E /* AppDelegate.swift */,
 				4E1B00FB29023BA800A6364E /* SceneDelegate.swift */,
-				4E1B00FD29023BA800A6364E /* ViewController.swift */,
+				4E1B00FD29023BA800A6364E /* NewMomentViewController.swift */,
 				4E1B00FF29023BA800A6364E /* Main.storyboard */,
 				4E1B010229023BA900A6364E /* Assets.xcassets */,
 				4E1B010429023BA900A6364E /* LaunchScreen.storyboard */,
@@ -127,6 +143,40 @@
 				4E1B011C29023BA900A6364E /* MomentsUITestsLaunchTests.swift */,
 			);
 			path = MomentsUITests;
+			sourceTree = "<group>";
+		};
+		4E1B012C29023EF200A6364E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4E1B012D29023F2200A6364E /* UIImageView.swift */,
+				4E1B012F29023FE200A6364E /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4E1B01332902410100A6364E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E1B01342902410F00A6364E /* Moment.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4E1B01362902416B00A6364E /* SQLiteDatasource */ = {
+			isa = PBXGroup;
+			children = (
+				4E1B01372902418800A6364E /* SQLiteDatabase.swift */,
+				4E1B0139290242DC00A6364E /* SQLiteCommands.swift */,
+			);
+			path = SQLiteDatasource;
+			sourceTree = "<group>";
+		};
+		4E1B013B2902482500A6364E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4E1B013C2902483E00A6364E /* NewMomentView.swift */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,9 +316,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E1B00FE29023BA800A6364E /* ViewController.swift in Sources */,
+				4E1B00FE29023BA800A6364E /* NewMomentViewController.swift in Sources */,
+				4E1B012E29023F2200A6364E /* UIImageView.swift in Sources */,
 				4E1B00FA29023BA800A6364E /* AppDelegate.swift in Sources */,
+				4E1B013A290242DC00A6364E /* SQLiteCommands.swift in Sources */,
 				4E1B00FC29023BA800A6364E /* SceneDelegate.swift in Sources */,
+				4E1B013029023FE200A6364E /* UIViewController.swift in Sources */,
+				4E1B013D2902483E00A6364E /* NewMomentView.swift in Sources */,
+				4E1B01352902410F00A6364E /* Moment.swift in Sources */,
+				4E1B01382902418800A6364E /* SQLiteDatabase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
