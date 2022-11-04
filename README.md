@@ -1,7 +1,7 @@
 # Moments APP
 ### This project is a semestral assesment in the University of Prishtina and the goal of it was to familiarize ourselves with the IOS mobile development 
 <br />
-The app is developed using the MVVM architectural pattern, xcode version 13.3.1, and SQLite from [this repository](https://github.com/stephencelis/SQLite.swift) and is compatible with IOS 16+ 
+The app is developed using the MVVM architectural pattern, xcode version 13.3.1, and SQLite from <a href="https://github.com/stephencelis/SQLite.swift">this repository</a> and is compatible with IOS 16+ 
 <br>    
 <br>  
 
